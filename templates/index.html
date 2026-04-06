@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedFair AI</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="toast-container"></div>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <h1>MedFair AI</h1>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-item active" data-target="dashboard">Dashboard</button>
+                <button class="nav-item" data-target="patients">Patients List</button>
+                <button class="nav-item" data-target="analytics">Analytics</button>
+                <button class="nav-item" data-target="settings">Settings</button>
+            </nav>
+        </aside>
 
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- DASHBOARD SECTION -->
+            <section id="dashboard" class="content-section active">
+                <header class="section-header">
+                    <h2>Dashboard</h2>
+                    <p>Enter patient details for AI clinical simulation.</p>
+                </header>
+
+                <div class="form-card card">
+                    <h3>Patient Input</h3>
+                    <form id="patient-form">
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label for="name">Patient Name *</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="input-group">
+                                <label for="age">Age *</label>
+                                <input type="number" id="age" required min="0" max="120" placeholder="45">
+                            </div>
+                            <div class="input-group">
+                                <label for="gender">Gender *</label>
+                                <select id="gender" required>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="symptom">Primary Symptom</label>
+                                <input type="text" id="symptom" list="symptom-suggestions" placeholder="e.g. Chest pain">
+                                <datalist id="symptom-suggestions">
+                                    <option value="Chest pain">
+                                    <option value="Shortness of breath">
+                                    <option value="Headache">
+                                    <option value="Fever">
+                                    <option value="Fatigue">
+                                </datalist>
+                            </div>
+                            <div class="input-group">
+                                <label for="severity">Severity</label>
+                                <select id="severity">
+                                    <option value="Low">Low</option>
+                                    <option value="Medium" selected>Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="duration">Duration</label>
+                                <select id="duration">
+                                    <option value="<1 day">&lt;1 day</option>
+                                    <option value="1-3 days" selected>1-3 days</option>
+                                    <option value="1 week+">1 week+</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="conditions">Pre-existing Conditions</label>
+                                <input type="text" id="conditions" placeholder="e.g. Hypertension">
+                            </div>
+                            <div class="input-group">
+                                <label for="lifestyle">Lifestyle Risk</label>
+                                <select id="lifestyle">
+                                    <option value="Low">Low</option>
+                                    <option value="Moderate" selected>Moderate</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-secondary">Add Patient</button>
+                            <button type="button" id="btn-simulate" class="btn btn-primary">Simulate AI Analysis</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Bias Alert Panel -->
+                <div id="bias-alert-panel" class="bias-panel hidden">
+                    <div class="bias-header">
+                        <h3>Bias Alert Panel</h3>
+                        <span id="bias-score" class="score-badge">0%</span>
+                    </div>
+                    <p id="bias-explanation" class="bias-explanation">Variation observed in treatment recommendations across demographic groups.</p>
+                    <button id="btn-fix-bias" class="btn btn-success">Fix Bias</button>
+                </div>
+
+                <!-- Results Area -->
+                <div id="results-container" class="results-grid">
+                    <!-- Cards dynamically injected here -->
+                </div>
+            </section>
+
+            <!-- PATIENTS LIST SECTION -->
+            <section id="patients" class="content-section">
+                <header class="section-header">
+                    <h2>Patients List</h2>
+                    <p>Total Patients: <span id="total-patients">0</span></p>
+                </header>
+                <div class="card table-card">
+                    <table id="patients-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Symptom</th>
+                                <th>Risk Level</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="patients-tbody">
+                            <!-- Rows dynamcially injected -->
+                        </tbody>
+                    </table>
+                    <div id="no-patients" class="empty-state">No patients added yet.</div>
+                </div>
+            </section>
+
+            <!-- ANALYTICS SECTION -->
+            <section id="analytics" class="content-section">
+                <header class="section-header">
+                    <h2>Fairness Analytics</h2>
+                    <p>Observed disparities across demographic segments.</p>
+                </header>
+                <div class="analytics-grid">
+                    <div class="card chart-card">
+                        <h3>Bias Impact Before vs After Correction</h3>
+                        <canvas id="biasChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SETTINGS SECTION -->
+            <section id="settings" class="content-section">
+                <header class="section-header">
+                    <h2>Bias Control Center</h2>
+                    <p>Configure model sensitivity and fairness constraints.</p>
+                </header>
+                <div class="card form-card">
+                    <div class="settings-grid">
+                        <div class="input-group">
+                            <label for="bias-sensitivity">Bias Sensitivity (0-100)</label>
+                            <input type="range" id="bias-sensitivity" min="0" max="100" value="50">
+                            <span id="sensitivity-val">50</span>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="fairness-mode">
+                                Fairness Mode
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="treatment-std">Treatment Standardization</label>
+                            <select id="treatment-std">
+                                <option value="Low">Low</option>
+                                <option value="Moderate" selected>Moderate</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="normalize-conf">
+                                Normalize Confidence
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions" style="margin-top: 20px;">
+                        <button id="btn-save-settings" class="btn btn-primary">Save Settings</button>
+                        <button id="btn-reset-settings" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="app-footer">
+                <p>Simulated healthcare AI system for fairness analysis</p>
+                <p class="disclaimer">This system is for demonstration purposes only and not for real medical use</p>
+            </footer>
+        </main>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
