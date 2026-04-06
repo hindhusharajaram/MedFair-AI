@@ -1,13 +1,17 @@
-# 🏥 MedFair AI — Responsible Clinical Decision Auditor
+# MedFair AI — Responsible Clinical Decision Auditor
 
-<div align="center">
+---
 
-![Header](https://capsule-render.vercel.app/render?type=waving&color=BBD2C5&height=200&section=header&text=MedFair%20AI&fontSize=80&animation=fadeIn&fontAlignY=38)
+MedFair AI is a Digital Bias Detector for medical computers. It acts like a second pair of eyes that double-checks a computer's medical advice to make sure it isn't being unfair based on a patient's gender or age.
 
-**Ensuring healthcare equity by detecting and correcting hidden AI bias.**
+If the system finds that a patient is getting different treatment just because of who they are, it flags the mistake, explains it in plain English, and suggests a fair treatment plan. It is a safety net that ensures every person receives the same high-quality care, no matter their background.
+
+---
 
 [![Python](https://img.shields.io/badge/Python-3.10+-AEC6CF?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Flask](https://img.shields.io/badge/Flask-Backend-E8EAF6?style=flat-square&logo=flask&logoColor=black)](https://flask.palletsprojects.com/)
 [![Anti-Gravity](https://img.shields.io/badge/UI-Anti--Gravity-61DAFB?style=flat-square&logo=python&logoColor=white)](https://github.com/tonybaloney/antigravity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -15,17 +19,22 @@
 ---
 
 ### 📑 Table of Contents
-[🚀 Problem Statement](#-problem-statement) • 
-[💡 Solution Overview](#-solution-overview) • 
-[🛠️ Tech Stack](#️-tech-stack) • 
-[🏗️ Architecture](#️-architecture) • 
-[⚙️ How It Works](#️-how-it-works) • 
-[🧪 Sample I/O](#-sample-io) • 
-[📂 Repository Structure](#-repository-structure) • 
-[👥 Team](#-team) • 
-[🏁 Conclusion](#-conclusion)
 
-</div>
+* [🚀 Problem Statement](#-problem-statement)
+* [💡 Solution Overview](#-solution-overview)
+* [✨ Key Features](#-key-features)
+* [🛠️ Tech Stack](#️-tech-stack)
+* [🏗️ Architecture](#️-architecture)
+* [⚙️ How It Works](#️-how-it-works)
+* [🧬 The Logic Flow](#-the-logic-flow)
+* [🧪 Example Scenario](#-example-scenario)
+* [📂 Repository Structure](#-repository-structure)
+* [👥 Team](#-team)
+* [🔮 Future Enhancements](#-future-enhancements)
+* [🏁 Final Conclusion](#-final-conclusion)
+* [🌍 Google Solution Challenge 2026](#-google-solution-challenge-2026)
+
+---
 
 ---
 
@@ -38,12 +47,14 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 ---
 
 ## 💡 Solution Overview
-**MedFair AI** acts as a "Fairness Supervisor." It is an intelligent system that:
+**MedFair AI** acts as a "Bias Detector" It is an intelligent system that:
 * **Scans** AI decisions for any signs of unfair treatment.
 * **Explains** exactly why a decision was flagged in simple words.
 * **Fixes** the problem by suggesting a fair treatment plan.
 
-### ✨ Key Features
+---
+
+## ✨ Key Features
 | Feature | What it does for you |
 | :--- | :--- |
 | **🧠 AI Decision Engine** | Generates the initial diagnosis using **Google Gemini**. |
@@ -59,11 +70,9 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 
 [![My Skills](https://skillicons.dev/icons?i=python,flask,js,html,css,github,git,vscode)](https://skillicons.dev)
 
-**Built with [Anti-Gravity UI](https://github.com/tonybaloney/antigravity):** A modern approach to building beautiful Python web apps.
-
-</div>
-
 ---
+
+<div align="left">
 
 ## 🏗️ Architecture
 *This diagram shows the journey from a patient's data to a fair medical decision.*
@@ -95,9 +104,7 @@ graph LR
 
 ---
 
----
-
-## ⚙️ How It Works (Step-by-Step)
+## ⚙️ How It Works
 *Our system acts as a "Fairness Filter" between the AI and the Doctor.*
 
 <div align="center">
@@ -113,7 +120,9 @@ graph LR
 
 </div>
 
-### 🧬 The Logic Flow
+---
+
+## 🧬 The Logic Flow
 ```mermaid
 graph LR
     Start([Input Data]) --> Engine{Gemini API}
@@ -135,25 +144,25 @@ graph LR
 
 ---
 
----
+## 🧪 Example Scenario
+*Let's look at a real-world test case generated directly from our application interface.*
+> **Question:** *What if the same 21-year-old patient with an Acute Headache and Migraine was Male?*
 
-## 🧪 Example Scenario: Detecting Gender Bias
-*Let's look at a real-world test case handled by MedFair AI.*
+To prove fairness, we run a "Shadow Clone" of Hindhusha, changing **only** the Gender variable and keeping everything else (Age, Symptom, Pre-existing condition) exactly the same.
 
 <div align="center">
 
-| Attribute | Patient A (Original) | Patient B (Shadow Clone) |
-| :--- | :---: | :---: |
-| **Symptom** | 🩺 Severe Chest Pain | 🩺 Severe Chest Pain |
-| **Age** | 52 | 52 |
-| **Gender** | **Male** | **Female** |
-| **Initial Output** | **Immediate ICU** | **General Ward** |
+| Clinical Attribute | Patient A (Original) | Patient B (Shadow Clone) |
+| :--- | :--- | :--- |
+| **Name** | Hindhusha | (Sam) |
+| **Symptom** | 🩺 Acute Headache | 🩺 Acute Headache |
+| **Pre-existing** | Migraine | Migraine |
+| **Age** | 21 | 21 |
+| **Gender** | **Female** (from App) | **Male** (Shadow Test) |
+| **Initial Output** | **Routine Care** | **Specialized Neuro Consult** |
 | **System Status** | ✅ Valid | 🚨 **BIASED** |
 
 </div>
-
-> [!CAUTION]
-> **The MedFair Correction:** In this scenario, the AI reduced priority for the female patient despite identical symptoms. Our system identifies this gap, flags it, and suggests **Immediate ICU** for both to ensure medical equity.
 
 ---
 
@@ -172,38 +181,10 @@ MedFair-AI/              ← 📁 MAIN PROJECT ROOT
 │
 ├── templates/           # 📁 Web Layouts
 │   ├── index.html       # 🏠 Main Dashboard
-│   └── result.html      # 📊 Audit Report
 │
 └── assets/              # 📁 Presentation
-    ├── demo.png         # 🎥 Project Preview
-    └── screenshot.png   # 📸 Feature Highlight
+    └──  demo.pdf        # 🎥 Project Preview
 ```
-
----
-
----
-
-## 🏁 Final Conclusion
-**MedFair AI** is more than just a tool; it is a movement toward **Responsible AI**. By building a framework that refuses to accept "Black Box" decisions, we ensure that the future of healthcare is built on a foundation of **trust, transparency, and total equality.**
-
-> [!NOTE]
-> **Google Solution Challenge 2026** 🌍
-> This project is dedicated to solving **UN Sustainable Development Goal #3: Good Health and Well-being**. We believe that "Good Health" must include "Fair Access" for all.
-
----
-
-## 👥 The Minds Behind the Mission
-
-<div align="center">
-
-| **Hindhusha** | **Maryam** |
-| :---: | :---: |
-| <img src="https://github.com/hindhusharajaram.png?size=100" width="100px;" style="border-radius:50%; border: 2px solid #AEC6CF;" /> | <img src="https://github.com/github.png?size=100" width="100px;" style="border-radius:50%; border: 2px solid #AEC6CF;" /> |
-| [**@hindhusharajaram**](https://github.com/hindhusharajaram) | [**@maryam**](https://github.com/yourusername) |
-| **Lead Architect** | **Experience Designer** |
-| *Backend & AI Systems* | *Frontend & UI/UX* |
-
-</div>
 
 ---
 
@@ -217,24 +198,22 @@ MedFair-AI/              ← 📁 MAIN PROJECT ROOT
 
 ---
 
----
-
-## 🎯 Our Mission: Unbiased AI Decision-Making
-> [!NOTE]
-> **Ensuring Fairness and Detecting Bias in Automated Decisions**
-> 
-> Computer programs now make life-changing decisions about who gets a job, a bank loan, or even medical care. However, if these programs learn from flawed or unfair historical data, they will repeat and amplify those exact same discriminatory mistakes. **MedFair AI** is built to break this cycle.
+## 🏁 Final Conclusion
+**MedFair AI** is more than just a tool; it is a movement toward **Responsible AI**. By building a framework that refuses to accept "Black Box" decisions, we ensure that the future of healthcare is built on a foundation of **trust, transparency, and total equality.**
 
 ---
 
-### 🛡️ Core Objective
-Our goal is to build a clear, accessible solution to thoroughly inspect data sets and software models for hidden unfairness or discrimination. We provide organizations with an easy way to:
+## 👥 Team
 
-| Action | Impact |
-| :--- | :--- |
-| **🔍 Measure** | Quantify hidden disparities in datasets before they are used. |
-| **🚨 Flag** | Automatically identify and alert users to discriminatory patterns. |
-| **✅ Fix** | Provide actionable corrections to ensure fair outcomes for real people. |
+<div align="center">
+
+| **Hindhusha P R** | **Maryam Nibras S** |
+| :---: | :---: |
+| <img src="https://github.com/hindhusharajaram.png?size=100" width="100px;" style="border-radius:50%; border: 2px solid #AEC6CF;" /> | <img src="https://github.com/github.png?size=100" width="100px;" style="border-radius:50%; border: 2px solid #AEC6CF;" /> |
+| [**@hindhusharajaram**](https://github.com/hindhusharajaram) | [**@maryamnibras157**](https://github.com/maryamnbras157) |
+| **Backend & AI Systems** | **Frontend & UI/UX** |
+
+</div>
 
 ---
 
@@ -243,8 +222,6 @@ Our goal is to build a clear, accessible solution to thoroughly inspect data set
 
 ![Google Solution Challenge](https://img.shields.io/badge/Google-Solution%20Challenge%202026-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Region](https://img.shields.io/badge/Region-India%20🇮🇳-008C45?style=for-the-badge)
-
-**This project is dedicated to solving UN Sustainable Development Goal #3: Good Health and Well-being.** We believe that "Good Health" must include "Fair Access" for all.
 
 </div>
 
