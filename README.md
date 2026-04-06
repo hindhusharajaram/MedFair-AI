@@ -224,15 +224,3 @@ MedFair-AI/              ← 📁 MAIN PROJECT ROOT
 ![Region](https://img.shields.io/badge/Region-India%20🇮🇳-008C45?style=for-the-badge)
 
 </div>
-
----
-
-<div align="center">
-
-[![Stargazers repo roster for @hindhusharajaram/MedFair-AI](https://reporoster.com/stars/hindhusharajaram/MedFair-AI)](https://github.com/hindhusharajaram/MedFair-AI/stargazers)
-
-<a href="https://github.com/hindhusharajaram/MedFair-AI">
-  <img src="https://img.shields.io/badge/★-SUPPORT%20ETHICAL%20AI-gold?style=for-the-badge" alt="Support Ethical AI">
-</a>
-
-</div>
