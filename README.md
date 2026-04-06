@@ -18,7 +18,7 @@ If the system finds that a patient is getting different treatment just because o
 
 ---
 
-### 📑 Table of Contents
+## 📑 Table of Contents
 
 * [🚀 Problem Statement](#-problem-statement)
 * [💡 Solution Overview](#-solution-overview)
@@ -154,8 +154,8 @@ To prove fairness, we run a "Shadow Clone" of Hindhusha, changing **only** the G
 
 | Clinical Attribute | Patient A (Original) | Patient B (Shadow Clone) |
 | :--- | :--- | :--- |
-| **Name** | Hindhusha | (Sam) |
-| **Symptom** | 🩺 Acute Headache | 🩺 Acute Headache |
+| **Name** | Hindhusha | Sam |
+| **Symptom** | Acute Headache | Acute Headache |
 | **Pre-existing** | Migraine | Migraine |
 | **Age** | 21 | 21 |
 | **Gender** | **Female** (from App) | **Male** (Shadow Test) |
@@ -210,7 +210,7 @@ MedFair-AI/              ← 📁 MAIN PROJECT ROOT
 | **Hindhusha P R** | **Maryam Nibras S** |
 | :---: | :---: |
 | <img src="https://github.com/hindhusharajaram.png?size=100" width="100px;" style="border-radius:50%; border: 2px solid #AEC6CF;" /> | <img src="https://github.com/github.png?size=100" width="100px;" style="border-radius:50%; border: 2px solid #AEC6CF;" /> |
-| [**@hindhusharajaram**](https://github.com/hindhusharajaram) | [**@maryamnibras157**](https://github.com/maryamnbras157) |
+| [**@hindhusharajaram**](https://github.com/hindhusharajaram) | [**@maryamnibras157**](https://github.com/maryamnibras157) |
 | **Backend & AI Systems** | **Frontend & UI/UX** |
 
 </div>
