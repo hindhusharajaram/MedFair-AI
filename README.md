@@ -68,7 +68,7 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 
 <div align="center">
 
-[![My Skills](https://skillicons.dev/icons?i=python,flask,js,html,css,github,git,vscode)](https://skillicons.dev)
+<img src="https://skillicons.dev/icons?i=python,flask,js,html,css,github,git,vscode,rocket" alt="My Tech Stack" />
 
 ---
 
