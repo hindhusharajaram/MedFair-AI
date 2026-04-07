@@ -18,27 +18,27 @@ If the system finds that a patient is getting different treatment just because o
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
-* [🚀 Problem Statement](#-problem-statement)
-* [💡 Solution Overview](#-solution-overview)
-* [✨ Key Features](#-key-features)
-* [🛠️ Tech Stack](#️-tech-stack)
-* [🏗️ Architecture](#️-architecture)
-* [⚙️ How It Works](#️-how-it-works)
-* [🧬 The Logic Flow](#-the-logic-flow)
-* [🧪 Example Scenario](#-example-scenario)
-* [📂 Repository Structure](#-repository-structure)
-* [👥 Team](#-team)
-* [🔮 Future Enhancements](#-future-enhancements)
-* [🏁 Final Conclusion](#-final-conclusion)
-* [🌍 Google Solution Challenge 2026](#-google-solution-challenge-2026)
-
----
+* [Problem Statement](#-problem-statement)
+* [Solution Overview](#-solution-overview)
+* [Key Features](#-key-features)
+* [Tech Stack](#️-tech-stack)
+* [Architecture](#️-architecture)
+* [How It Works](#️-how-it-works)
+* [The Logic Flow](#-the-logic-flow)
+* [Example Scenario](#-example-scenario)
+* [Repository Structure](#-repository-structure)
+* [Team](#-team)
+* [Future Enhancements](#-future-enhancements)
+* [Final Conclusion](#-final-conclusion)
+* [Google Solution Challenge 2026](#-google-solution-challenge-2026)
 
 ---
 
-## 🚀 Problem Statement
+---
+
+## Problem Statement
 Artificial Intelligence is now helping doctors make big decisions. However, these systems often learn from old data that contains **hidden unfairness**. 
 
 > [!IMPORTANT]
@@ -46,7 +46,7 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 
 ---
 
-## 💡 Solution Overview
+## Solution Overview
 **MedFair AI** acts as a "Bias Detector" It is an intelligent system that:
 * **Scans** AI decisions for any signs of unfair treatment.
 * **Explains** exactly why a decision was flagged in simple words.
@@ -54,17 +54,17 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 
 ---
 
-## ✨ Key Features
+## Key Features
 | Feature | What it does for you |
 | :--- | :--- |
-| **🧠 AI Decision Engine** | Generates the initial diagnosis using **Google Gemini**. |
-| **🔬 "What-If" Analysis** | Swaps a patient's gender/age to see if the AI stays consistent. |
-| **⚖️ Bias Alert System** | Flags unfair decisions with a "Bias Score" 🚨. |
-| **✅ Correction Engine** | Provides a safe, unbiased medical recommendation. |
+| **AI Decision Engine** | Generates the initial diagnosis using **Google Gemini**. |
+| **"What-If" Analysis** | Swaps a patient's gender/age to see if the AI stays consistent. |
+| **Bias Alert System** | Flags unfair decisions with a "Bias Score". |
+| **Correction Engine** | Provides a safe, unbiased medical recommendation. |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -74,7 +74,7 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 
 <div align="left">
 
-## 🏗️ Architecture
+## Architecture
 *This diagram shows the journey from a patient's data to a fair medical decision.*
 
 ```mermaid
@@ -104,25 +104,25 @@ graph LR
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 *Our system acts as a "Fairness Filter" between the AI and the Doctor.*
 
 <div align="center">
 
 | Step | Action | Simple Explanation |
 | :---: | :--- | :--- |
-| **01** | **📥 Data Entry** | The user enters patient details (Symptoms, Age, Gender). |
-| **02** | **🤖 AI Diagnosis** | **Google Gemini** suggests a medical treatment plan. |
-| **03** | **👥 Shadow Audit** | The system creates a "What-If" clone with a different gender. |
-| **04** | **🔍 Comparison** | We check if the AI treated the clone differently. |
-| **05** | **🚨 Bias Alert** | If a disparity is found, the system flags it as **Biased**. |
-| **06** | **✅ Correction** | The engine provides a **Fair, Balanced** recommendation. |
+| **01** | **Data Entry** | The user enters patient details (Symptoms, Age, Gender). |
+| **02** | **AI Diagnosis** | **Google Gemini** suggests a medical treatment plan. |
+| **03** | **Shadow Audit** | The system creates a "What-If" clone with a different gender. |
+| **04** | **Comparison** | We check if the AI treated the clone differently. |
+| **05** | **Bias Alert** | If a disparity is found, the system flags it as **Biased**. |
+| **06** | **Correction** | The engine provides a **Fair, Balanced** recommendation. |
 
 </div>
 
 ---
 
-## 🧬 The Logic Flow
+## The Logic Flow
 ```mermaid
 graph LR
     Start([Input Data]) --> Engine{Gemini API}
@@ -132,7 +132,7 @@ graph LR
     Profile1 & Profile2 --> Audit{Fairness Check}
     
     Audit -- "Equal Treatment" --> Success([Finish: Fair Decision])
-    Audit -- "Disparity Found" --> Alert[🚨 BIAS DETECTED]
+    Audit -- "Disparity Found" --> Alert[BIAS DETECTED]
     
     Alert --> Fix[Correction Engine]
     Fix --> Success
@@ -144,7 +144,7 @@ graph LR
 
 ---
 
-## 🧪 Example Scenario
+## Example Scenario
 *Let's look at a real-world test case generated directly from our application interface.*
 > **Question:** *What if the same 21-year-old patient with an Acute Headache and Migraine was Male?*
 
@@ -160,50 +160,50 @@ To prove fairness, we run a "Shadow Clone" of Hindhusha, changing **only** the G
 | **Age** | 21 | 21 |
 | **Gender** | **Female** (from App) | **Male** (Shadow Test) |
 | **Initial Output** | **Routine Care** | **Specialized Neuro Consult** |
-| **System Status** | ✅ Valid | 🚨 **BIASED** |
+| **System Status** | Valid | **BIASED** |
 
 </div>
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 *Organized for clarity and rapid deployment.*
 
 ```bash
-MedFair-AI/              ← 📁 MAIN PROJECT ROOT
+MedFair-AI/              ← MAIN PROJECT ROOT
 │
-├── app.py               # 📄 The "Brain" (Anti-Gravity Backend)
-├── requirements.txt     # 📄 The "Ingredients" (Library list)
+├── app.py               # The "Brain" (Anti-Gravity Backend)
+├── requirements.txt     # The "Ingredients" (Library list)
 │
-├── static/              # 📁 Visual Assets
-│   ├── style.css        # ✨ Premium UI Styling
-│   └── script.js        # ⚡ Interactive Logic
+├── static/              # Visual Assets
+│   ├── style.css        # Premium UI Styling
+│   └── script.js        # Interactive Logic
 │
-├── templates/           # 📁 Web Layouts
-│   └── index.html       # 🏠 Main Dashboard
+├── templates/           # Web Layouts
+│   └── index.html       # Main Dashboard
 │
-└── assets/              # 📁 Presentation
-    └──  demo.pdf        # 🎥 Project Preview
+└── assets/              # Presentation
+    └──  demo.pdf        # Project Preview
 ```
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 *The journey to perfect fairness doesn't end here. Our roadmap for the next version includes:*
 
-* **🌍 Multi-Language Support:** Localizing the auditor for global medical contexts.
-* **📊 Real-Time Monitoring:** A live dashboard for hospital administrators to track bias trends over time.
-* **🧬 Intersectional Audit:** Moving beyond single-attribute checks to detect complex bias (e.g., Age + Gender combined).
-* **☁️ Google Cloud Deployment:** Scaling the system using App Engine for high-availability clinical use.
+* **Multi-Language Support:** Localizing the auditor for global medical contexts.
+* **Real-Time Monitoring:** A live dashboard for hospital administrators to track bias trends over time.
+* **Intersectional Audit:** Moving beyond single-attribute checks to detect complex bias (e.g., Age + Gender combined).
+* **Google Cloud Deployment:** Scaling the system using App Engine for high-availability clinical use.
 
 ---
 
-## 🏁 Final Conclusion
+## Final Conclusion
 **MedFair AI** is more than just a tool; it is a movement toward **Responsible AI**. By building a framework that refuses to accept "Black Box" decisions, we ensure that the future of healthcare is built on a foundation of **trust, transparency, and total equality.**
 
 ---
 
-## 👥 Team
+## Team
 
 <div align="center">
 
@@ -217,7 +217,7 @@ MedFair-AI/              ← 📁 MAIN PROJECT ROOT
 
 ---
 
-## 🌍 Google Solution Challenge 2026
+## Google Solution Challenge 2026
 <div align="center">
 
 ![Google Solution Challenge](https://img.shields.io/badge/Google-Solution%20Challenge%202026-4285F4?style=for-the-badge&logo=google&logoColor=white)
