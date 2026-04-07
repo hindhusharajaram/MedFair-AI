@@ -180,7 +180,7 @@ MedFair-AI/              ← 📁 MAIN PROJECT ROOT
 │   └── script.js        # ⚡ Interactive Logic
 │
 ├── templates/           # 📁 Web Layouts
-│   ├── index.html       # 🏠 Main Dashboard
+│   └── index.html       # 🏠 Main Dashboard
 │
 └── assets/              # 📁 Presentation
     └──  demo.pdf        # 🎥 Project Preview
