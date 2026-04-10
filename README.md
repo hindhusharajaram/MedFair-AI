@@ -1,12 +1,8 @@
 # MedFair AI — Responsible Clinical Decision Auditor
 
----
-
 MedFair AI is a Digital Bias Detector for medical computers. It acts like a second pair of eyes that double-checks a computer's medical advice to make sure it isn't being unfair based on a patient's gender or age.
 
 If the system finds that a patient is getting different treatment just because of who they are, it flags the mistake, explains it in plain English, and suggests a fair treatment plan. It is a safety net that ensures every person receives the same high-quality care, no matter their background.
-
----
 
 [![Python](https://img.shields.io/badge/Python-3.10+-AEC6CF?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -16,27 +12,21 @@ If the system finds that a patient is getting different treatment just because o
 [![Anti-Gravity](https://img.shields.io/badge/UI-Anti--Gravity-61DAFB?style=flat-square&logo=python&logoColor=white)](https://github.com/tonybaloney/antigravity)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://opensource.org/licenses/MIT)
 
----
-
 ## Table of Contents
 
-* [Problem Statement](#-problem-statement)
-* [Solution Overview](#-solution-overview)
-* [Key Features](#-key-features)
-* [Tech Stack](#️-tech-stack)
-* [Architecture](#️-architecture)
-* [How It Works](#️-how-it-works)
-* [The Logic Flow](#-the-logic-flow)
-* [Example Scenario](#-example-scenario)
-* [Repository Structure](#-repository-structure)
-* [Team](#-team)
-* [Future Enhancements](#-future-enhancements)
-* [Final Conclusion](#-final-conclusion)
-* [Google Solution Challenge 2026](#-google-solution-challenge-2026)
-
----
-
----
+* [Problem Statement](#problem-statement)
+* [Solution Overview](#solution-overview)
+* [Key Features](#key-features)
+* [Tech Stack](#tech-stack)
+* [Architecture](#architecture)
+* [How It Works](#how-it-works)
+* [The Logic Flow](#the-logic-flow)
+* [Example Scenario](#example-scenario)
+* [Repository Structure](#repository-structure)
+* [Team](#team)
+* [Future Enhancements](#future-enhancements)
+* [Final Conclusion](#final-conclusion)
+* [Google Solution Challenge 2026](#google-solution-challenge-2026)
 
 ## Problem Statement
 Artificial Intelligence is now helping doctors make big decisions. However, these systems often learn from old data that contains **hidden unfairness**. 
@@ -44,15 +34,11 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 > [!IMPORTANT]
 > **The Risk:** A patient might receive lower-quality care simply because of their **gender or age**, even if their medical condition is the same as someone else's. Currently, we lack tools that can "audit" these computers to ensure they are being fair.
 
----
-
 ## Solution Overview
 **MedFair AI** acts as a "Bias Detector" It is an intelligent system that:
 * **Scans** AI decisions for any signs of unfair treatment.
 * **Explains** exactly why a decision was flagged in simple words.
 * **Fixes** the problem by suggesting a fair treatment plan.
-
----
 
 ## Key Features
 | Feature | What it does for you |
@@ -62,15 +48,11 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 | **Bias Alert System** | Flags unfair decisions with a "Bias Score". |
 | **Correction Engine** | Provides a safe, unbiased medical recommendation. |
 
----
-
 ## Tech Stack
 
 <div align="center">
 
 <img src="https://skillicons.dev/icons?i=python,flask,js,html,css,github,git,vscode,rocket" alt="My Tech Stack" />
-
----
 
 <div align="left">
 
@@ -102,8 +84,6 @@ graph LR
     style Output fill:#414868,stroke:#fff,color:#fff
 ```
 
----
-
 ## How It Works
 *Our system acts as a "Fairness Filter" between the AI and the Doctor.*
 
@@ -119,8 +99,6 @@ graph LR
 | **06** | **Correction** | The engine provides a **Fair, Balanced** recommendation. |
 
 </div>
-
----
 
 ## The Logic Flow
 ```mermaid
@@ -142,8 +120,6 @@ graph LR
     style Engine fill:#E1F5FE,stroke:#01579B,color:#000
 ```
 
----
-
 ## Example Scenario
 *Let's look at a real-world test case generated directly from our application interface.*
 > **Question:** *What if the same 21-year-old patient with an Acute Headache and Migraine was Male?*
@@ -163,8 +139,6 @@ To prove fairness, we run a "Shadow Clone" of Hindhusha, changing **only** the G
 | **System Status** | Valid | **BIASED** |
 
 </div>
-
----
 
 ## Repository Structure
 *Organized for clarity and rapid deployment.*
@@ -186,8 +160,6 @@ MedFair-AI/              ← MAIN PROJECT ROOT
     └──  demo.pdf        # Project Preview
 ```
 
----
-
 ## Future Enhancements
 *The journey to perfect fairness doesn't end here. Our roadmap for the next version includes:*
 
@@ -196,12 +168,8 @@ MedFair-AI/              ← MAIN PROJECT ROOT
 * **Intersectional Audit:** Moving beyond single-attribute checks to detect complex bias (e.g., Age + Gender combined).
 * **Google Cloud Deployment:** Scaling the system using App Engine for high-availability clinical use.
 
----
-
 ## Final Conclusion
 **MedFair AI** is more than just a tool; it is a movement toward **Responsible AI**. By building a framework that refuses to accept "Black Box" decisions, we ensure that the future of healthcare is built on a foundation of **trust, transparency, and total equality.**
-
----
 
 ## Team
 
@@ -214,8 +182,6 @@ MedFair-AI/              ← MAIN PROJECT ROOT
 | **Backend & AI Systems** | **Frontend & UI/UX** |
 
 </div>
-
----
 
 ## Google Solution Challenge 2026
 <div align="center">
