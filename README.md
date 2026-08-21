@@ -48,7 +48,7 @@ Artificial Intelligence is now helping doctors make big decisions. However, thes
 | **Bias Alert System** | Flags unfair decisions with a "Bias Score". |
 | **Correction Engine** | Provides a safe, unbiased medical recommendation. |
 
-## Tech Stack
+## Tech Stack used
 
 <div align="center">
 
