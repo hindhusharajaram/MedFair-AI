@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Navigation Logic ---
+    // --- Navigation Logic ---
     const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('.content-section');
 
