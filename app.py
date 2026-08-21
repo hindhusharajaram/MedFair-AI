@@ -5,6 +5,7 @@ import os
 app = Flask(__name__)
 
 # In-memory storage
+# In-memory storage
 patients = []
 analysis_results = []
 bias_score = 0.0
